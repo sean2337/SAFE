@@ -1,5 +1,7 @@
+import Toast from '../components/Toast/Toast';
+
 const StartingPage = () => {
-  return <>ss</>;
+  return <></>;
 };
 
 export default StartingPage;
