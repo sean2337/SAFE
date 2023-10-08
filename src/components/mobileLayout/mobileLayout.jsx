@@ -5,7 +5,7 @@ import { MotionConfig } from 'framer-motion';
 import isValidProp from '@emotion/is-prop-valid';
 
 const Background = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,7 +15,9 @@ const Background = styled.div`
 const Mobile = styled(motion.div)`
   position: relative;
   width: 390px;
+  //width: 100vw;
   height: 100vh;
+  height: auto;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -24,28 +26,6 @@ const Mobile = styled(motion.div)`
     props.color
       ? props.theme.colors[props.color]
       : props.theme.colors.background};
-
-  ${(props) =>
-    props.darkShadow &&
-    css`
-      background: radial-gradient(
-          50% 50% at 50% 50%,
-          rgba(224, 222, 222, 0.6) 0%,
-          rgba(224, 222, 222, 0) 100%
-        ),
-        #f5f5f5;
-    `}
-
-  ${(props) =>
-    props.loginShadow &&
-    css`
-      background: radial-gradient(
-          72.26% 45.91% at 50% 54.09%,
-          rgba(224, 222, 222, 0.6) 0%,
-          rgba(224, 222, 222, 0) 100%
-        ),
-        #ffffff;
-    `}
 `;
 
 const ProgressBar = styled.div`
