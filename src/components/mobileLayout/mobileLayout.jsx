@@ -6,7 +6,8 @@ import isValidProp from '@emotion/is-prop-valid';
 
 const Background = styled.div`
   width: 100%;
-  height: 100vh;
+  //height: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
   background-color: black;
@@ -16,9 +17,10 @@ const Mobile = styled(motion.div)`
   position: relative;
   width: 390px;
   //width: 100vw;
-  height: 100vh;
+  //height: 100vh;
   height: auto;
   margin: 0 auto;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
