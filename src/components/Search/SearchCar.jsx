@@ -36,7 +36,7 @@ const SearchCar = ({ value, setValue }) => {
       <SearchInput
         value={value}
         onChange={handleInputChange}
-        placeholder="Search for a car..."
+        placeholder="Search for your car..."
       />
     </SearchBox>
   );

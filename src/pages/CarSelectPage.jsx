@@ -10,22 +10,23 @@ import carArr from '../assets/CarArr/CarArr';
 import SearchCar from '../components/Search/SearchCar';
 import { useEffect, useState } from 'react';
 
-const CarBoxWrapper = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  padding-bottom: 50px;
-`;
-
 const SliderWrapper = styled.div`
   width: 100%;
+  height: 402px;
+  margin-bottom: 30px;
 `;
 
 const CarSelectPage = () => {
   const [searchCar, setSearchCar] = useState('');
   const [selectCar, setSelectCar] = useState(carArr[0].carName);
+  const [filteredCars, setFilteredCars] = useState(carArr);
+
   useEffect(() => {
-    console.log(searchCar);
+    // 검색어에 따라 carArr에서 필터링된 배열을 만들어서 상태로 설정
+    const filtered = carArr.filter((car) =>
+      car.carName.toLowerCase().includes(searchCar.toLowerCase())
+    );
+    setFilteredCars(filtered);
   }, [searchCar]);
 
   const settings = {
@@ -42,21 +43,14 @@ const CarSelectPage = () => {
     <MobileLayout color="white">
       <BackHeader />
       <SearchCar value={searchCar} setValue={setSearchCar} />
-      <CarBoxWrapper>
-        <SliderWrapper>
-          <Slider
-            {...settings}
-            initialSlide={0}
-            beforeChange={(slide, newSlide) =>
-              setSelectCar(carArr[newSlide].carName)
-            }
-          >
-            {carArr.map((carInfo, index) => (
-              <CarSelectBox key={index} carInfo={carInfo} />
-            ))}
-          </Slider>
-        </SliderWrapper>
-      </CarBoxWrapper>
+
+      <SliderWrapper>
+        <Slider {...settings} initialSlide={0}>
+          {filteredCars.map((carInfo, index) => (
+            <CarSelectBox key={index} carInfo={carInfo} />
+          ))}
+        </Slider>
+      </SliderWrapper>
       <ProgressBar stage="CarSelect" />
     </MobileLayout>
   );
