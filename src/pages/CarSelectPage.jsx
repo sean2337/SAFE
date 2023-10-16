@@ -8,6 +8,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import carArr from '../assets/CarArr/CarArr';
 import SearchCar from '../components/Search/SearchCar';
+import NextButton from '../components/Button/NextButton';
+import PrevButton from '../components/Button/PrevButton';
 import { useEffect, useState } from 'react';
 
 const SliderWrapper = styled.div`
@@ -51,6 +53,8 @@ const CarSelectPage = () => {
           ))}
         </Slider>
       </SliderWrapper>
+      <PrevButton />
+      <NextButton />
       <ProgressBar stage="CarSelect" />
     </MobileLayout>
   );
