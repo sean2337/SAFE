@@ -29,6 +29,22 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.jsx"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off",
+          "@babel/plugin-proposal-private-property-in-object": [
+            "error",
+            {
+              "loose": true
+            }
+          ]
+        }
+      }
     ]
   },
   "browserslist": {
@@ -42,5 +58,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "babel-eslint": "^10.1.0"
   }
 }
