@@ -30,17 +30,17 @@ const ProgressBar = ({ stage }) => {
           <ConnectingLine />
           <EachCircle kind="calendar" />
           <ConnectingLine />
-          <EachCircle kind="calendar" />
+          <EachCircle kind="map" />
         </>
       )}
 
-      {stage === 'DateSelect' && (
+      {stage === 'DaySelect' && (
         <>
           <EachCircle />
           <ConnectingLine check={true} />
           <EachCircle kind="calendar" />
           <ConnectingLine />
-          <EachCircle kind="calendar" />
+          <EachCircle kind="map" />
         </>
       )}
 
@@ -50,7 +50,7 @@ const ProgressBar = ({ stage }) => {
           <ConnectingLine check={true} />
           <EachCircle />
           <ConnectingLine check={true} />
-          <EachCircle kind="calendar" />
+          <EachCircle kind="map" />
         </>
       )}
     </BarBox>
