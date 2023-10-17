@@ -10,8 +10,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import carArr from '../assets/CarArr/CarArr';
 import SearchCar from '../components/Search/SearchCar';
 import NextButton from '../components/Button/NextButton';
-import PrevButton from '../components/Button/PrevButton';
-import Space_Between from '../components/Contain/Space_Between';
+
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import EmptyCarBox from '../components/CarSelectBox/EmptyCarBox';
