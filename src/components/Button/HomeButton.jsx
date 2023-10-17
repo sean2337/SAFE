@@ -12,15 +12,15 @@ const ButtonBox = styled.button`
   padding-left: 10px;
 `;
 
-const NextButton = ({ onClick }) => {
+const HomeButton = ({ onClick }) => {
   return (
     <ButtonBox onClick={onClick}>
       <Text textColor={'white'} fontSize={'19px'}>
-        Next
+        Home
       </Text>
       <CgChevronRight size={'35px'} color="white" />
     </ButtonBox>
   );
 };
 
-export default NextButton;
+export default HomeButton;

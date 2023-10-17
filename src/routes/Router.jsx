@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import StartingPage from '../pages/StartingPage';
 import CarSelectPage from '../pages/CarSelectPage';
 import DaySelectPage from '../pages/DaySelectPage';
+import MapPage from '../pages/MapPage';
 
 const Router = () => (
   <BrowserRouter>
@@ -9,6 +10,7 @@ const Router = () => (
       <Route path="/" element={<StartingPage />} />
       <Route path="/CarSelect" element={<CarSelectPage />} />
       <Route path="/DaySelect" element={<DaySelectPage />} />
+      <Route path="/Map" element={<MapPage />} />
     </Routes>
   </BrowserRouter>
 );

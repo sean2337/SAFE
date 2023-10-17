@@ -78,10 +78,16 @@ const StartingPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    const beforeCarName = localStorage.getItem('carName');
+    const beforeDay = localStorage.getItem('day');
+    if (!beforeCarName && !beforeDay) {
+      Toast('Safe에 오신걸 환영합니다.');
+    } else {
+      localStorage.clear('carName');
+      localStorage.clear('day');
+    }
     const startingCar = document.getElementById('startingCar');
     startingCar.classList.add('initial');
-
-    Toast('Safe에 오신걸 환영합니다.');
   }, []);
 
   const handleNextBtnClick = () => {

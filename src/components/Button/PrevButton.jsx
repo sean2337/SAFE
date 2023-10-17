@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Text from '../Text/Text';
 import { CgChevronLeft } from 'react-icons/cg';
-//react-icons/cg/CgChevronLeft
 const ButtonBox = styled.button`
   width: 100px;
   height: 53px;
