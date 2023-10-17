@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { MotionConfig } from 'framer-motion';
 import isValidProp from '@emotion/is-prop-valid';
 

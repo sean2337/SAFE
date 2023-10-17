@@ -4,7 +4,7 @@ import ProgressBar from '../components/ProgressBar/ProgressBar';
 import styled from 'styled-components';
 import PrevButton from '../components/Button/PrevButton';
 import HomeButton from '../components/Button/HomeButton';
-import Space_Between from '../components/Contain/Space_Between';
+import SpaceBetween from '../components/Contain/SpaceBetween';
 import { useNavigate } from 'react-router-dom';
 
 const BottomWrapper = styled.div`
@@ -32,14 +32,14 @@ const MapPage = () => {
       <BackHeader />
       <MapWrapper></MapWrapper>
       <BottomWrapper>
-        <Space_Between>
+        <SpaceBetween>
           <PrevButton onClick={() => navigate(-1)} />
           <HomeButton
             onClick={() => {
               navigate('/', { replaceTo: '/' });
             }}
           />
-        </Space_Between>
+        </SpaceBetween>
         <ProgressBar stage="DaySelect" />
       </BottomWrapper>
     </MobileLayout>

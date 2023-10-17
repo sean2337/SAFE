@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Text from '../Text/Text';
 import { CgCheck } from 'react-icons/cg';
-import { AiFillCar } from 'react-icons/ai';
 import { MdSearchOff } from 'react-icons/md';
 
 const BoxPadding = styled.div`
@@ -9,15 +8,6 @@ const BoxPadding = styled.div`
   height: 380px;
   display: flex;
   justify-content: center;
-`;
-
-const TextWrapper = styled.div`
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding-top: 30px;
 `;
 
 const Box = styled.div`

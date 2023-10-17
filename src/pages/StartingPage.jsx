@@ -52,7 +52,7 @@ const TextWrapper = styled.div`
   margin-top: 30px;
 `;
 
-const Car_Text_Wrapper = styled.div`
+const CarTextWrapper = styled.div`
   width: 100%;
   height: fit-content;
   display: flex;
@@ -107,7 +107,7 @@ const StartingPage = () => {
   return (
     <>
       <MobileLayout color="secondColor">
-        <Car_Text_Wrapper>
+        <CarTextWrapper>
           <TextWrapper>
             <TextLine>
               <Text>Move</Text>
@@ -122,7 +122,7 @@ const StartingPage = () => {
             src={startingCarImage}
             alt="Starting Car"
           />
-        </Car_Text_Wrapper>
+        </CarTextWrapper>
 
         <NextBtn
           onClick={() => {

@@ -27,7 +27,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app/warn",
+      "react-app",
       "react-app/jest"
     ],
     "overrides": [

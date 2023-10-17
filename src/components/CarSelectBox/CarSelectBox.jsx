@@ -105,7 +105,7 @@ const CarSelectBox = ({ carInfo, selectCar, setSelectCar }) => {
           </Text>
         </TextWrapper>
         <ImgWrapper>
-          {selectCar == carInfo.detailedName ? (
+          {selectCar === carInfo.detailedName ? (
             <>
               <Checkmark size="xLarge" color="#8294C4" />
             </>

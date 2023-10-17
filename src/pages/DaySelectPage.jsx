@@ -8,7 +8,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import NextButton from '../components/Button/NextButton';
 import PrevButton from '../components/Button/PrevButton';
-import Space_Between from '../components/Contain/Space_Between';
+import SpaceBetween from '../components/Contain/SpaceBetween';
 import { useNavigate } from 'react-router-dom';
 import getWeekDates from '../components/\bFunction/GetWeekDates';
 import DaySelectBox from '../components/DaySelectBox/DaySelectBox';
@@ -28,7 +28,7 @@ const DaySelectPage = () => {
   const [selectDay, setSelectDay] = useState('');
 
   const DateNextFun = () => {
-    if (selectDay == '') {
+    if (selectDay === '') {
       Toast('요일을 선택해주세요.');
     } else {
       localStorage.setItem('day', selectDay);
@@ -62,10 +62,10 @@ const DaySelectPage = () => {
         </Slider>
       </SliderWrapper>
 
-      <Space_Between>
+      <SpaceBetween>
         <PrevButton onClick={() => navigate(-1)} />
         <NextButton onClick={() => DateNextFun()} />
-      </Space_Between>
+      </SpaceBetween>
 
       <ProgressBar stage="DaySelect" />
     </MobileLayout>

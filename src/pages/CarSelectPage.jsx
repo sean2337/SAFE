@@ -48,7 +48,7 @@ const CarSelectPage = () => {
   }, [searchCar]);
 
   const CarNextFun = () => {
-    if (selectCar == '') {
+    if (selectCar === '') {
       Toast('차량을 선택해주세요.');
     } else {
       localStorage.setItem('carName', selectCar);

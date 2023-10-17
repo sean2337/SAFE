@@ -8,8 +8,8 @@ const Wrapper = styled.div`
   margin-top: 30px;
 `;
 
-const Space_Between = ({ children }) => {
+const SpaceBetween = ({ children }) => {
   return <Wrapper>{children}</Wrapper>;
 };
 
-export default Space_Between;
+export default SpaceBetween;
