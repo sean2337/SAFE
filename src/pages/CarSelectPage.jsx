@@ -14,10 +14,11 @@ import PrevButton from '../components/Button/PrevButton';
 import Space_Between from '../components/Contain/Space_Between';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import EmptyCarBox from '../components/CarSelectBox/EmptyCarBox';
 
 const SliderWrapper = styled.div`
   width: 100%;
-  height: 402px;
+  height: 380px;
 `;
 const BottomBtnWrapper = styled.div`
   width: 90%;
@@ -32,6 +33,13 @@ const CarSelectPage = () => {
   const [selectCar, setSelectCar] = useState('');
   const [filteredCars, setFilteredCars] = useState(carArr);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const beforeCarName = localStorage.getItem('carName');
+    if (beforeCarName) {
+      setSelectCar(beforeCarName);
+    }
+  }, []);
 
   useEffect(() => {
     const filtered = carArr.filter((car) =>
@@ -66,6 +74,7 @@ const CarSelectPage = () => {
 
       <SliderWrapper>
         <Slider {...settings} initialSlide={0}>
+          {filteredCars.length === 0 && <EmptyCarBox />}
           {filteredCars.map((carInfo, index) => (
             <CarSelectBox
               key={index}

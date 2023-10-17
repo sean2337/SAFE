@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import Text from '../Text/Text';
 import { CgCheck } from 'react-icons/cg';
-import { Checkmark } from 'react-checkmark';
+import { AiFillCar } from 'react-icons/ai';
+import { MdSearchOff } from 'react-icons/md';
 
 const BoxPadding = styled.div`
   width: 300px;
@@ -55,7 +56,7 @@ const BottomBox = styled.div`
   position: absolute;
   bottom: 0%;
   left: 0%;
-  padding-top: 10px;
+  padding-top: 35px;
 `;
 
 const CheckBox = styled.div`
@@ -71,72 +72,23 @@ const CheckBox = styled.div`
   align-items: center;
 `;
 
-const CarImg = styled.img`
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  overflow: visible;
-`;
-
-const DayWrapper = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: start;
-  margin-left: 20px;
-  margin-bottom: 5px;
-`;
-
-const CarSelectBox = ({ carInfo, selectCar, setSelectCar }) => {
+const EmptyCarBox = () => {
   return (
     <BoxPadding>
-      <Box
-        onClick={() => {
-          setSelectCar(carInfo.detailedName);
-        }}
-      >
-        <TextWrapper>
-          <Text
-            fontFamily={'pretendard-semibold'}
-            fontSize={'20px'}
-            textColor={'secondBlack'}
-          >
-            {carInfo.carName}
-          </Text>
-        </TextWrapper>
+      <Box>
         <ImgWrapper>
-          {selectCar == carInfo.detailedName ? (
-            <>
-              <Checkmark size="xLarge" color="#8294C4" />
-            </>
-          ) : (
-            <CarImg src={`CarImg/${carInfo.carName}.png`} />
-          )}
+          <MdSearchOff size={'100px'} color="#8294c4" />
         </ImgWrapper>
         <BottomBox>
-          <DayWrapper>
-            <Text
-              fontFamily={'pretendard-semibold'}
-              fontSize={'17px'}
-              textColor={'secondBlack'}
-            >
-              {carInfo.releaseYear}
-            </Text>
-          </DayWrapper>
-
           <Text
             fontFamily={'pretendard-semibold'}
             fontSize={'20px'}
             textColor={'secondBlack'}
           >
-            {carInfo.detailedName}
+            검색어 없음
           </Text>
 
-          <CheckBox
-            onClick={() => {
-              setSelectCar(carInfo.detailedName);
-            }}
-          >
+          <CheckBox>
             <CgCheck size={'30px'} color="white" />
           </CheckBox>
         </BottomBox>
@@ -145,4 +97,4 @@ const CarSelectBox = ({ carInfo, selectCar, setSelectCar }) => {
   );
 };
 
-export default CarSelectBox;
+export default EmptyCarBox;
