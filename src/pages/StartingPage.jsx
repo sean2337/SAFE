@@ -1,6 +1,5 @@
 import MobileLayout from '../components/mobileLayout/mobileLayout';
 import styled, { keyframes } from 'styled-components';
-import startingCarImage from '../assets/img/startingCar.png';
 import Text from '../components/Text/Text';
 import { useEffect } from 'react';
 import Toast from '../components/Toast/Toast';
@@ -119,7 +118,7 @@ const StartingPage = () => {
           </TextWrapper>
           <StartingCar
             id="startingCar"
-            src={startingCarImage}
+            src={'CarImg/startingCar.svg'}
             alt="Starting Car"
           />
         </CarTextWrapper>

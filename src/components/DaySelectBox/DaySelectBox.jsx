@@ -77,7 +77,7 @@ const DaySelectBox = ({ dayInfo, selectDay, setSelectDay }) => {
             {dayInfo.date}
           </Text>
         </TopWrapper>
-        <TopImg src="OtherImg/DaySelectTop.png" />
+        <TopImg src="OtherImg/DaySelectTop.svg" />
         <CircleWrapper>
           {selectDay === dayInfo.day ? (
             <Checkmark size="106px" color="#404756" />
