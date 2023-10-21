@@ -57,7 +57,7 @@ const CarTextWrapper = styled.div`
   height: fit-content;
   display: flex;
   justify-content: space-between;
-  margin-top: 200px;
+  margin-top: 150px;
   align-items: flex-start;
   margin-left: 20px;
 `;

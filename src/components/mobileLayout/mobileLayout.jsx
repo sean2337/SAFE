@@ -6,19 +6,21 @@ import isValidProp from '@emotion/is-prop-valid';
 
 const Background = styled.div`
   width: 100%;
-  //height: 100vh;
-  height: auto;
+  height: 100%;
+  //height: auto;
   display: flex;
   justify-content: center;
   background-color: black;
+  overflow-x: hidden;
+  overflow-y: hidden;
 `;
 
 const Mobile = styled(motion.div)`
+  overflow-x: hidden;
+  overflow-y: hidden;
   position: relative;
   width: 390px;
-  //width: 100vw;
-  //height: 100vh;
-  height: auto;
+  height: 100%;
   margin: 0 auto;
   padding-bottom: 50px;
   display: flex;
