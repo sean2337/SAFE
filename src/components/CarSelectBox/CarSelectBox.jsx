@@ -110,7 +110,7 @@ const CarSelectBox = ({ carInfo, selectCar, setSelectCar }) => {
               <Checkmark size="xLarge" color="#8294C4" />
             </>
           ) : (
-            <CarImg src={`CarImg/${carInfo.carName}.svg`} />
+            <CarImg src={`CarImg/${carInfo.carName}.svg`} decoding="sync" />
           )}
         </ImgWrapper>
         <BottomBox>
