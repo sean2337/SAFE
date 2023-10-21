@@ -1,5 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
+import PretendardBold from '../src/assets/fonts/Pretendard-Bold.woff';
+import PretendardSemiBold from '../src/assets/fonts/Pretendard-SemiBold.woff';
+import PretendardMedium from '../src/assets/fonts/Pretendard-Medium.woff';
+import PretendardRegular from '../src/assets/fonts/Pretendard-Regular.woff';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -12,25 +16,25 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'Pretendard-bold';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    src: url(${PretendardBold}) format('woff');
     font-weight: 700;
   }
 
   @font-face {
     font-family: 'Pretendard-semibold';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+    src: url(${PretendardSemiBold}) format('woff');
     font-weight: 600;
   }
 
   @font-face {
     font-family: 'Pretendard-medium';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+    src: url(${PretendardMedium}) format('woff');
     font-weight: 500;
   }
 
   @font-face {
     font-family: 'Pretendard-regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    src: url(${PretendardRegular}) format('woff');
     font-weight: 400;
   }
   
