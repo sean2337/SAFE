@@ -20,6 +20,7 @@ const Box = styled.div`
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  clip-path: border-box;
 `;
 
 const TopImg = styled.img`
@@ -29,6 +30,7 @@ const TopImg = styled.img`
   top: 0%;
   left: -10%;
   z-index: 1;
+  clip-path: border-box;
 `;
 
 const TopWrapper = styled.div`
