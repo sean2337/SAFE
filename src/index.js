@@ -10,7 +10,11 @@ import carArr from './assets/CarArr/CarArr';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // 이미지 URL 리스트
-const exImageUrls = ['CarImg/startingCar.svg', 'OtherImg/DaySelect.svg'];
+const exImageUrls = [
+  'CarImg/startingCar.svg',
+  'OtherImg/DaySelect.svg',
+  'OtherImg/Loading.gif',
+];
 const imageUrls = carArr.map((car) => `CarImg/${car.carName}.svg`);
 // 이미지 미리 로딩
 exImageUrls.forEach((url) => preloadImage(url));
