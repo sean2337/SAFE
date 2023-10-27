@@ -10,8 +10,7 @@ const BarBox = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 30px;
 `;
 
 const ConnectingLine = styled.div`

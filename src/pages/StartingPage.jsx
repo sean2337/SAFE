@@ -56,7 +56,6 @@ const CarTextWrapper = styled.div`
   height: fit-content;
   display: flex;
   justify-content: space-between;
-  margin-top: 150px;
   align-items: flex-start;
   margin-left: 20px;
 `;
@@ -69,8 +68,8 @@ const NextBtn = styled.div`
   display: flex;
   justify-content: center;
   padding-top: 12px;
+  padding-bottom: 12px;
   border-radius: 8px;
-  margin-top: 30px;
 `;
 
 const StartingPage = () => {

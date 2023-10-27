@@ -7,9 +7,9 @@ import isValidProp from '@emotion/is-prop-valid';
 const Background = styled.div`
   width: 100%;
   height: 100%;
-  //height: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: black;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -17,14 +17,14 @@ const Background = styled.div`
 
 const Mobile = styled(motion.div)`
   overflow-x: hidden;
-  overflow-y: hidden;
+  //overflow-y: hidden;
   position: relative;
   width: 390px;
   height: 100%;
   margin: 0 auto;
-  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: ${(props) =>
     props.color
