@@ -105,6 +105,7 @@ const StartingPage = () => {
   return (
     <>
       <MobileLayout color="secondColor" isBack={true}>
+        <div></div>
         <CarTextWrapper>
           <TextWrapper>
             <TextLine>

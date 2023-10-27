@@ -22,37 +22,41 @@ const ConnectingLine = styled.div`
 
 const ProgressBar = ({ stage }) => {
   return (
-    <BarBox>
-      {stage === 'CarSelect' && (
-        <>
-          <EachCircle kind="car" />
-          <ConnectingLine />
-          <EachCircle kind="calendar" />
-          <ConnectingLine />
-          <EachCircle kind="map" />
-        </>
-      )}
+    <>
+      {stage && (
+        <BarBox>
+          {stage === 'CarSelect' && (
+            <>
+              <EachCircle kind="car" />
+              <ConnectingLine />
+              <EachCircle kind="calendar" />
+              <ConnectingLine />
+              <EachCircle kind="map" />
+            </>
+          )}
 
-      {stage === 'DaySelect' && (
-        <>
-          <EachCircle />
-          <ConnectingLine check={true} />
-          <EachCircle kind="calendar" />
-          <ConnectingLine />
-          <EachCircle kind="map" />
-        </>
-      )}
+          {stage === 'DaySelect' && (
+            <>
+              <EachCircle />
+              <ConnectingLine check={true} />
+              <EachCircle kind="calendar" />
+              <ConnectingLine />
+              <EachCircle kind="map" />
+            </>
+          )}
 
-      {stage === 'ShowMap' && (
-        <>
-          <EachCircle />
-          <ConnectingLine check={true} />
-          <EachCircle />
-          <ConnectingLine check={true} />
-          <EachCircle kind="map" />
-        </>
+          {stage === 'ShowMap' && (
+            <>
+              <EachCircle />
+              <ConnectingLine check={true} />
+              <EachCircle />
+              <ConnectingLine check={true} />
+              <EachCircle kind="map" />
+            </>
+          )}
+        </BarBox>
       )}
-    </BarBox>
+    </>
   );
 };
 

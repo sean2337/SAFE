@@ -19,7 +19,7 @@ const Background = styled.div`
 
 const Mobile = styled(motion.div)`
   overflow-x: hidden;
-  //overflow-y: hidden;
+  overflow-y: hidden;
   position: relative;
   width: 390px;
   min-width: 360px;
@@ -37,11 +37,11 @@ const Mobile = styled(motion.div)`
       : props.theme.colors.background};
 `;
 
-const MobileLayout = ({ children, isBack, stage, ...rest }) => {
+const MobileLayout = ({ children, color, isBack, stage, ...rest }) => {
   return (
     <MotionConfig isValidProp={isValidProp}>
       <Background>
-        <Mobile {...rest}>
+        <Mobile {...rest} color={color}>
           {!isBack && window.innerHeight >= 630 && <BackHeader />}
           {children}
           <ProgressBar stage={stage} />
