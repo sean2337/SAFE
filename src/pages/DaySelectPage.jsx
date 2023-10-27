@@ -1,6 +1,4 @@
 import MobileLayout from '../components/mobileLayout/mobileLayout';
-import BackHeader from '../components/BackHeader/BackHeader';
-import ProgressBar from '../components/ProgressBar/ProgressBar';
 import styled from 'styled-components';
 import Slider from 'react-slick';
 import Toast from '../components/Toast/Toast';
@@ -16,9 +14,9 @@ import { useState } from 'react';
 
 const SliderWrapper = styled.div`
   width: 100%;
-  height: 402px;
-  margin-top: 30px;
-  margin-bottom: 38px;
+  height: 400px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 `;
 
 const DaySelectPage = () => {
@@ -26,7 +24,6 @@ const DaySelectPage = () => {
 
   const week = getWeekDates();
   const [selectDay, setSelectDay] = useState('');
-
   const DateNextFun = () => {
     if (selectDay === '') {
       Toast('요일을 선택해주세요.');
@@ -47,8 +44,7 @@ const DaySelectPage = () => {
   };
 
   return (
-    <MobileLayout color="white">
-      <BackHeader />
+    <MobileLayout color="white" stage="DaySelect">
       <SliderWrapper>
         <Slider {...settings} initialSlide={0}>
           {week.map((dayInfo, index) => (
@@ -66,8 +62,6 @@ const DaySelectPage = () => {
         <PrevButton onClick={() => navigate(-1)} />
         <NextButton onClick={() => DateNextFun()} />
       </SpaceBetween>
-
-      <ProgressBar stage="DaySelect" />
     </MobileLayout>
   );
 };

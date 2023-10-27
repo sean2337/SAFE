@@ -1,6 +1,4 @@
 import MobileLayout from '../components/mobileLayout/mobileLayout';
-import BackHeader from '../components/BackHeader/BackHeader';
-import ProgressBar from '../components/ProgressBar/ProgressBar';
 import CarSelectBox from '../components/CarSelectBox/CarSelectBox';
 import styled from 'styled-components';
 import Slider from 'react-slick';
@@ -22,8 +20,8 @@ const BottomBtnWrapper = styled.div`
   width: 90%;
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-top: 5px;
 `;
 
 const CarSelectPage = () => {
@@ -66,8 +64,7 @@ const CarSelectPage = () => {
   };
 
   return (
-    <MobileLayout color="white">
-      <BackHeader />
+    <MobileLayout color="white" stage={'CarSelect'}>
       <SearchCar value={searchCar} setValue={setSearchCar} />
 
       <SliderWrapper>
@@ -91,8 +88,6 @@ const CarSelectPage = () => {
           }}
         />
       </BottomBtnWrapper>
-
-      <ProgressBar stage="CarSelect" />
     </MobileLayout>
   );
 };
