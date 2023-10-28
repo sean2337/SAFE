@@ -51,25 +51,26 @@ const MapPage = () => {
 
   return (
     <>
-      {isLoading && LoadingPage}
-
-      <MobileLayout color="white">
-        <MapWrapper>
-          <Map src="/SafeWeb/index.html" title="SafeMap" />
-        </MapWrapper>
-        <BottomWrapper>
-          <SpaceBetween>
-            <PrevButton onClick={() => navigate(-1)} />
-            <HomeButton
-              onClick={() => {
-                navigate('/', { replaceTo: '/' });
-              }}
-            />
-          </SpaceBetween>
-          <Margin height="20px" />
-          <ProgressBar stage={'ShowMap'} />
-        </BottomWrapper>
-      </MobileLayout>
+      {isLoading && <LoadingPage />}
+      {!isLoading && (
+        <MobileLayout color="white">
+          <MapWrapper>
+            <Map src="/SafeWeb/index.html" title="SafeMap" />
+          </MapWrapper>
+          <BottomWrapper>
+            <SpaceBetween>
+              <PrevButton onClick={() => navigate(-1)} />
+              <HomeButton
+                onClick={() => {
+                  navigate('/', { replaceTo: '/' });
+                }}
+              />
+            </SpaceBetween>
+            <Margin height="20px" />
+            <ProgressBar stage={'ShowMap'} />
+          </BottomWrapper>
+        </MobileLayout>
+      )}
     </>
   );
 };
