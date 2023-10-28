@@ -27,7 +27,7 @@ const BottomWrapper = styled.div`
 
 const Map = styled.iframe`
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   overflow-x: hidden;
   overflow-y: hidden;
 `;
