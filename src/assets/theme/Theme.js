@@ -13,6 +13,7 @@ const colors = {
   mainColor: '#8294C4',
   secondColor: '#DBDFEA',
   thirdColor: '#F6F4EB',
+  loadingColor: `linear-gradient(to right, #4739CB, #4947D2)`,
 };
 
 const box = `

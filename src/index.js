@@ -26,6 +26,7 @@ function setScreenHeight() {
 }
 
 const App = () => {
+  //첫 초기화면시 높이 잡기
   useEffect(() => {
     setScreenHeight();
   }, []);

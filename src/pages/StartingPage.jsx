@@ -70,6 +70,7 @@ const NextBtn = styled.div`
   padding-top: 12px;
   padding-bottom: 12px;
   border-radius: 8px;
+  margin-bottom: 50px;
 `;
 
 const StartingPage = () => {
@@ -105,7 +106,7 @@ const StartingPage = () => {
   return (
     <>
       <MobileLayout color="secondColor" isBack={true}>
-        <div></div>
+        <div style={{ width: '100%', height: '60px' }} />
         <CarTextWrapper>
           <TextWrapper>
             <TextLine>

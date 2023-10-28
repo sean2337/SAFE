@@ -29,7 +29,7 @@ const DaySelectPage = () => {
       Toast('요일을 선택해주세요.');
     } else {
       localStorage.setItem('day', selectDay);
-      navigate('/Loading');
+      navigate('/Map');
     }
   };
 

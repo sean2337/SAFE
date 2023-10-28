@@ -6,6 +6,8 @@ import SpaceBetween from '../components/Contain/SpaceBetween';
 import { useNavigate } from 'react-router-dom';
 import ProgressBar from '../components/ProgressBar/ProgressBar';
 import Margin from '../components/Margin/Margin';
+import LoadingPage from './LoadingPage';
+import { useEffect, useState } from 'react';
 
 const BottomWrapper = styled.div`
   width: 100%;
@@ -37,6 +39,19 @@ const MapWrapper = styled.div`
 
 const MapPage = () => {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const loadingTimer = setTimeout(() => {
+      setIsLoading(false);
+    }, 8000);
+
+    return () => clearTimeout(loadingTimer);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingPage />;
+  }
 
   return (
     <MobileLayout color="white">
