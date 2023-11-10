@@ -72,8 +72,8 @@ const CheckBox = styled.div`
 `;
 
 const CarImg = styled.img`
-  width: 300px;
-  height: 200px;
+  width: 170px;
+  height: 130px;
   object-fit: cover;
   overflow: visible;
 `;
@@ -92,7 +92,7 @@ const CarSelectBox = ({ carInfo, selectCar, setSelectCar }) => {
     <BoxPadding>
       <Box
         onClick={() => {
-          setSelectCar(carInfo.detailedName);
+          setSelectCar(carInfo.carName);
         }}
       >
         <TextWrapper>
@@ -105,7 +105,7 @@ const CarSelectBox = ({ carInfo, selectCar, setSelectCar }) => {
           </Text>
         </TextWrapper>
         <ImgWrapper>
-          {selectCar === carInfo.detailedName ? (
+          {selectCar === carInfo.carName ? (
             <>
               <Checkmark size="xLarge" color="#8294C4" />
             </>

@@ -39,6 +39,10 @@
     <script src="js/leaflet-search.js"></script>
     <script src="data/5181_1.js"></script>
     <script>
+      var choiceCar = localStorage.getItem('carName');
+      var choiceDate = localStorage.getItem('day');
+      var showMapName = choiceCar + '_' + choiceDate;
+      console.log(showMapName);
       var highlightLayer;
       function highlightFeature(e) {
         highlightLayer = e.target;
@@ -282,8 +286,9 @@
             break;
         }
       }
-
-      map.createPane('pane_5181_1');
+      {
+        showMapName == 'Grandeur_FRIDAY' && map.createPane('pane_5181_1');
+      }
       map.getPane('pane_5181_1').style.zIndex = 401;
       map.getPane('pane_5181_1').style['mix-blend-mode'] = 'normal';
       var layer_5181_1 = new L.geoJson(json_5181_1, {
