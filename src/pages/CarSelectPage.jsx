@@ -25,6 +25,14 @@ const BottomBtnWrapper = styled.div`
   margin-top: 5px;
 `;
 
+const CustomSlider = styled(Slider)`
+  .slick-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+`;
+
 const CarSelectPage = () => {
   const [searchCar, setSearchCar] = useState('');
   const [selectCar, setSelectCar] = useState('');
@@ -67,9 +75,8 @@ const CarSelectPage = () => {
   return (
     <MobileLayout color="white" stage={'CarSelect'}>
       <SearchCar value={searchCar} setValue={setSearchCar} />
-
       <SliderWrapper>
-        <Slider {...settings} initialSlide={0}>
+        <CustomSlider {...settings} initialSlide={0}>
           {filteredCars.length === 0 && <EmptyCarBox />}
           {filteredCars.map((carInfo, index) => (
             <CarSelectBox
@@ -79,7 +86,7 @@ const CarSelectPage = () => {
               setSelectCar={setSelectCar}
             />
           ))}
-        </Slider>
+        </CustomSlider>
       </SliderWrapper>
 
       <BottomBtnWrapper>

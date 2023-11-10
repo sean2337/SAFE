@@ -2,8 +2,8 @@
 const carArr = [
   {
     carName: 'Genesis',
-    detailedName: 'Carnival - 2023',
-    releaseYear: 2023,
+    detailedName: 'Genesis - 2023',
+    releaseYear: 2022,
   },
   {
     carName: 'Grandeur',

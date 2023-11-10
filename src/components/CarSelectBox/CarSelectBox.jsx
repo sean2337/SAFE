@@ -8,6 +8,7 @@ const BoxPadding = styled.div`
   height: 380px;
   display: flex;
   justify-content: center;
+  margin: 0;
 `;
 
 const TextWrapper = styled.div`
