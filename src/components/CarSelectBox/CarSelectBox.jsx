@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Text from '../Text/Text';
 import { CgCheck } from 'react-icons/cg';
 import { Checkmark } from '../CheckMark/checkmark';
-import InlineSVG from 'react-inlinesvg';
 
 const BoxPadding = styled.div`
   width: 300px;
