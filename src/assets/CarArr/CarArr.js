@@ -17,8 +17,8 @@ const carArr = [
   },
   {
     carName: 'Carnival',
-    detailedName: 'Carnival - 2020',
-    releaseYear: 2020,
+    detailedName: 'Carnival - 2019',
+    releaseYear: 2019,
   },
   {
     carName: 'K5',
