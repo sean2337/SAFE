@@ -19,6 +19,14 @@ const SliderWrapper = styled.div`
   margin-bottom: 20px;
 `;
 
+const CustomSlider = styled(Slider)`
+  .slick-slide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+`;
+
 const DaySelectPage = () => {
   const navigate = useNavigate();
 
@@ -46,7 +54,7 @@ const DaySelectPage = () => {
   return (
     <MobileLayout color="white" stage="DaySelect">
       <SliderWrapper>
-        <Slider {...settings} initialSlide={0}>
+        <CustomSlider {...settings} initialSlide={0}>
           {week.map((dayInfo, index) => (
             <DaySelectBox
               key={index}
@@ -55,7 +63,7 @@ const DaySelectPage = () => {
               setSelectDay={setSelectDay}
             />
           ))}
-        </Slider>
+        </CustomSlider>
       </SliderWrapper>
 
       <SpaceBetween>
