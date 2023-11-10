@@ -50,7 +50,7 @@ const ImgWrapper = styled.div`
   overflow: visible;
 `;
 
-const CarImg = styled(InlineSVG)`
+const CarImg = styled.img`
   width: ${(props) => (props.carName === 'Ray' ? '235px' : '280px')};
   height: auto;
   object-fit: cover;
