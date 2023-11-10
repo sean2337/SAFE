@@ -1,7 +1,9 @@
+import React from 'react';
 import styled from 'styled-components';
 import Text from '../Text/Text';
 import { CgCheck } from 'react-icons/cg';
 import { Checkmark } from '../CheckMark/checkmark';
+import InlineSVG from 'react-inlinesvg';
 
 const BoxPadding = styled.div`
   width: 300px;
@@ -48,7 +50,7 @@ const ImgWrapper = styled.div`
   overflow: visible;
 `;
 
-const CarImg = styled.img`
+const CarImg = styled(InlineSVG)`
   width: ${(props) => (props.carName === 'Ray' ? '235px' : '280px')};
   height: auto;
   object-fit: cover;
