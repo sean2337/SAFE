@@ -45,6 +45,14 @@ const ImgWrapper = styled.div`
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  overflow: visible;
+`;
+
+const CarImg = styled.img`
+  width: ${(props) => (props.carName === 'Ray' ? '235px' : '280px')};
+  height: auto;
+  object-fit: cover;
+  overflow: visible;
 `;
 
 const BottomBox = styled.div`
@@ -70,13 +78,6 @@ const CheckBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-
-const CarImg = styled.img`
-  width: 170px;
-  height: 130px;
-  object-fit: cover;
-  overflow: visible;
 `;
 
 const DayWrapper = styled.div`
@@ -111,7 +112,11 @@ const CarSelectBox = ({ carInfo, selectCar, setSelectCar }) => {
               <Checkmark size="xLarge" color="#8294C4" />
             </>
           ) : (
-            <CarImg src={`CarImg/${carInfo.carName}.svg`} decoding="sync" />
+            <CarImg
+              src={`CarImg/${carInfo.carName}.svg`}
+              decoding="sync"
+              carName={carInfo.carName}
+            />
           )}
         </ImgWrapper>
         <BottomBox>
