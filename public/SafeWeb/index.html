@@ -191,6 +191,13 @@
     <script src="data/Ray_MONDAY_70.js"></script>
 
     <script>
+      var choiceCar = localStorage.getItem('carName');
+      var choiceDate = localStorage.getItem('day');
+      var choiceScript = createFileName(choiceCar, choiceDate);
+      var fileName = `data/Grandeur_WEDNESDAY_47.js`;
+      var script = document.createElement('script');
+      script.src = fileName;
+      document.body.appendChild(script);
       var highlightLayer;
       function highlightFeature(e) {
         highlightLayer = e.target;
