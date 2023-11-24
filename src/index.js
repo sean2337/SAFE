@@ -14,6 +14,7 @@ const exImageUrls = [
   'CarImg/startingCar.svg',
   'OtherImg/DaySelect.svg',
   'OtherImg/Loading.gif',
+  '/SafeWeb/map_Loading.gif',
 ];
 const imageUrls = carArr.map((car) => `CarImg/${car.carName}.svg`);
 // 이미지 미리 로딩
