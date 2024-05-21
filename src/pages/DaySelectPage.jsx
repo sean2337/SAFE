@@ -1,15 +1,15 @@
-import MobileLayout from '../components/mobileLayout/mobileLayout';
 import styled from 'styled-components';
 import Slider from 'react-slick';
 import Toast from '../components/Toast/Toast';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import MobileLayout from '../components/mobileLayout/mobileLayout';
 import NextButton from '../components/Button/NextButton';
 import PrevButton from '../components/Button/PrevButton';
 import SpaceBetween from '../components/Contain/SpaceBetween';
-import { useNavigate } from 'react-router-dom';
-import getWeekDates from '../components/\bFunction/GetWeekDates';
+import getWeekDates from '../components/Function/GetWeekDates';
 import DaySelectBox from '../components/DaySelectBox/DaySelectBox';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 const SliderWrapper = styled.div`

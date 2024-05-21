@@ -1,16 +1,16 @@
-import MobileLayout from '../components/mobileLayout/mobileLayout';
-import CarSelectBox from '../components/CarSelectBox/CarSelectBox';
 import styled from 'styled-components';
 import Slider from 'react-slick';
 import Toast from '../components/Toast/Toast';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import MobileLayout from '../components/mobileLayout/mobileLayout';
+import CarSelectBox from '../components/CarSelectBox/CarSelectBox';
+import EmptyCarBox from '../components/CarSelectBox/EmptyCarBox';
 import carArr from '../assets/CarArr/CarArr';
 import SearchCar from '../components/Search/SearchCar';
 import NextButton from '../components/Button/NextButton';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import EmptyCarBox from '../components/CarSelectBox/EmptyCarBox';
 
 const SliderWrapper = styled.div`
   width: 100%;

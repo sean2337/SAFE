@@ -1,8 +1,8 @@
-import MobileLayout from '../components/mobileLayout/mobileLayout';
 import styled, { keyframes } from 'styled-components';
 import Text from '../components/Text/Text';
-import { useEffect } from 'react';
 import Toast from '../components/Toast/Toast';
+import MobileLayout from '../components/mobileLayout/mobileLayout';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const moveUp = keyframes`

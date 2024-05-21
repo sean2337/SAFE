@@ -1,12 +1,12 @@
-import MobileLayout from '../components/mobileLayout/mobileLayout';
 import styled from 'styled-components';
+import MobileLayout from '../components/mobileLayout/mobileLayout';
 import PrevButton from '../components/Button/PrevButton';
 import HomeButton from '../components/Button/HomeButton';
 import SpaceBetween from '../components/Contain/SpaceBetween';
-import { useNavigate } from 'react-router-dom';
 import ProgressBar from '../components/ProgressBar/ProgressBar';
 import Margin from '../components/Margin/Margin';
 import LoadingPage from './LoadingPage';
+import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 const BottomWrapper = styled.div`
